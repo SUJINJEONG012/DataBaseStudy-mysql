@@ -65,3 +65,11 @@ primary key (orderno, goodscd) using btree
 collate 'utf8mb4_general_ci'
 engine = InnoDB;
 
+
+-- members 데이터 넣기
+insert into members(memid, memname, addr, birthday, jobcd) values ('jeong','안젤라','부산광역시', '1992-04-24', '1');
+insert into members(memid, memname, addr, birthday, jobcd) values ('kang','수진','서울특별시', '1992-04-22', '3');
+insert into members(memid, memname, addr, birthday, jobcd) values ('wang','윌리','부산광역시', '1992-06-14', '4');
+
+
+
