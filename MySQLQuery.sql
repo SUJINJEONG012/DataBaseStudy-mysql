@@ -49,3 +49,19 @@ primary key(orderno) using btree
 )
 collate 'utf8mb4_general_ci'
 engine = InnoDB;
+
+-- 상품 디테일
+create table order_d(
+orderno char(9) not null comment '주문번호' collate 'utf8mb4_general_ci',
+goodscd char(5) not null comment '상품코드' collate 'utf8mb4_general_ci',
+unitcd char(2) null default null comment '단위코드' collate 'utf8mb4_general_ci',
+unitprice decimal(5,0) unsigned not null default '0' comment '단가',
+dty decimal(3,0) unsigned not null default '0' comment '주문수량',
+amt decimal(7,0) unsigned not null default '0' comment '주문금액', 
+insdtm datetime not null default current_timestamp() comment '등록일시',
+moddtm datetime null default null comment '변경일시',
+primary key (orderno, goodscd) using btree
+)
+collate 'utf8mb4_general_ci'
+engine = InnoDB;
+
