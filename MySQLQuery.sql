@@ -70,6 +70,15 @@ engine = InnoDB;
 insert into members(memid, memname, addr, birthday, jobcd) values ('jeong','안젤라','부산광역시', '1992-04-24', '1');
 insert into members(memid, memname, addr, birthday, jobcd) values ('kang','수진','서울특별시', '1992-04-22', '3');
 insert into members(memid, memname, addr, birthday, jobcd) values ('wang','윌리','부산광역시', '1992-06-14', '4');
+-- 데이터 넣은 값 확인하기 
+select * from members;
 
-
-
+-- 데이터 삽입
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS01','노트','01','2000');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS02','연필','01','2000');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS03','복사지','03','5000');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS04','볼펜','01','500');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS05','네임펜','02','1000');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS06','크레파스','02','1500');
+-- 데이터 넣은 값 확인하기
+select * from goodsinfo;
