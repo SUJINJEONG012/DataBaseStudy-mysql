@@ -165,3 +165,13 @@ select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\order
 
 
 -- 테이블 내용 삭제하기
+delete from members;
+
+--  value  > off 로 지정 되어있는데, on으로 변경해야할거같다 .
+SHOW GLOBAL VARIABLES LIKE 'LOCAL_INFILE';
+-- on으로 변경
+set global local_infile=true;
+
+-- 외부파일로부터 데이터 가져오기
+load data local infile 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\members.txt' into table members fields terminated by ',' enclosed by '"';
+
