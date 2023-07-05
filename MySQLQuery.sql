@@ -21,6 +21,15 @@ primary key (memid)
 collate 'utf8mb4_general_ci'
 engine = InnoDB;
 
+-- members 데이터 넣기
+insert into members(memid, memname, addr, birthday, jobcd) values ('jeong','안젤라','부산광역시', '1992-04-24', '1');
+insert into members(memid, memname, addr, birthday, jobcd) values ('kang','수진','서울특별시', '1992-04-22', '3');
+insert into members(memid, memname, addr, birthday, jobcd) values ('wang','윌리','부산광역시', '1992-06-14', '4');
+-- 데이터 넣은 값 확인하기 
+select * from members;
+
+
+
 -- goodsinfo 테이블생성
 create table goodsinfo (
 goodscd char(5) not null comment '상품코드' collate  'utf8mb4_general_ci', 
@@ -34,6 +43,16 @@ primary key (goodscd) using btree
 )
 collate 'utf8mb4_general_ci'
 engine = InnoDB;
+
+-- 데이터 삽입
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS01','노트','01','2000');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS02','연필','01','2000');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS03','복사지','03','5000');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS04','볼펜','01','500');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS05','네임펜','02','1000');
+insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS06','크레파스','02','1500');
+-- 데이터 넣은 값 확인하기
+select * from goodsinfo;
 
 -- order_h 테이블 생성(주문테이블)
 create table order_h(
@@ -49,6 +68,22 @@ primary key(orderno) using btree
 )
 collate 'utf8mb4_general_ci'
 engine = InnoDB;
+
+
+-- order_h 데이터 값 넣기
+insert into order_h ( orderno, orddt, memid, ordamt, insdtm) values ('202201001','2022-01-24', 'seo','10000','2022-03-01 14:49:07');
+insert into order_h ( orderno, orddt, memid, ordamt, insdtm) values ('202201002','2022-01-24', 'hong2','10000','2022-03-01 14:49:07');
+insert into order_h ( orderno, orddt, memid, ordamt, insdtm) values ('202201003','2022-01-24', 'hong1','15000','2022-03-01 14:51:07');
+insert into order_h ( orderno, orddt, memid, ordamt, insdtm) values ('202201004','2022-01-24', 'kim1','10000','2022-03-01 14:51:58');
+insert into order_h ( orderno, orddt, memid, ordamt, cancelyn, canceldtm, insdtm) values ('202201005','2022-01-24', 'park','5000','Y','2022=01-25 00:00:00','2022-03-01 14:53:12');
+
+insert into order_h ( orderno, orddt, memid, ordamt, insdtm) values ('202202001','2022-02-01', 'hong1','1000','2022-03-01 14:54:40');
+insert into order_h ( orderno, orddt, memid, ordamt, insdtm) values ('202202002','2022-02-01', 'hong1','10000','2022-03-01 14:54:40');
+insert into order_h ( orderno, orddt, memid, ordamt, insdtm) values ('202202003','2022-02-02', 'park','10000','2022-03-01 14:55:28');
+insert into order_h ( orderno, orddt, memid, ordamt, insdtm) values ('202202004','2022-02-02', 'abcd','500','2022-03-01 14:56:03');
+
+
+
 
 -- 상품 디테일
 create table order_d(
@@ -66,19 +101,5 @@ collate 'utf8mb4_general_ci'
 engine = InnoDB;
 
 
--- members 데이터 넣기
-insert into members(memid, memname, addr, birthday, jobcd) values ('jeong','안젤라','부산광역시', '1992-04-24', '1');
-insert into members(memid, memname, addr, birthday, jobcd) values ('kang','수진','서울특별시', '1992-04-22', '3');
-insert into members(memid, memname, addr, birthday, jobcd) values ('wang','윌리','부산광역시', '1992-06-14', '4');
--- 데이터 넣은 값 확인하기 
-select * from members;
 
--- 데이터 삽입
-insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS01','노트','01','2000');
-insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS02','연필','01','2000');
-insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS03','복사지','03','5000');
-insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS04','볼펜','01','500');
-insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS05','네임펜','02','1000');
-insert into goodsinfo(goodscd, goodsname, unitcd, unitprice) values ('GDS06','크레파스','02','1500');
--- 데이터 넣은 값 확인하기
-select * from goodsinfo;
+
