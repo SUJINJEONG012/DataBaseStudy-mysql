@@ -108,6 +108,13 @@ primary key (orderno, goodscd) using btree
 collate 'utf8mb4_general_ci'
 engine = InnoDB;
 
+-- 주문상세 데이터 삽입
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
 
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
 
 
