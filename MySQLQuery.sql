@@ -22,14 +22,16 @@ collate 'utf8mb4_general_ci'
 engine = InnoDB;
 
 -- members 데이터 넣기
-insert into members(memid, memname, addr, birthday, jobcd) values ('jeong','안젤라','부산광역시', '1992-04-24', '1');
-insert into members(memid, memname, addr, birthday, jobcd) values ('kang','수진','서울특별시', '1992-04-22', '3');
-insert into members(memid, memname, addr, birthday, jobcd) values ('wang','윌리','부산광역시', '1992-06-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('park','박기자','경기 부천', '1992-06-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('Tech','태현','경기 수원', '1980-11-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('hong2','홍길동1','서울 강남 신사동', '2004-12-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('seo','서갑돌','인천 동구', '2004-12-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('kim1','김갑수','인천 동구 숭림동', '1980-11-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('hong1','홍길동','인천 연수구 연수동', '2002-02-14', '4');
 
-insert into members(memid, memname, addr, birthday, jobcd) values ('park','홍길동','인천 동구 송림동', '1992-06-14', '4');
-insert into members(memid, memname, addr, birthday, jobcd) values ('kim1','홍길동','서울 강남구 신사동', '1980-11-14', '4');
-insert into members(memid, memname, addr, birthday, jobcd) values ('hong1','김갑수','인천 연수구 연수동', '2004-12-14', '4');
-insert into members(memid, memname, addr, birthday, jobcd) values ('hong2','박기자','경기 부천시', '2002-02-14', '4');
+
+
+
 
 -- 데이터 넣은 값 확인하기 
 select * from members;
@@ -128,3 +130,16 @@ insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) valu
 select memid, memname from members;
 -- 데이터 열 이름 지정하기 : AS
 select memname as '회원명' , memid as '회원ID' from members;
+-- 데이터 정렬하기 오름차순 ASC, 내림차순 DESC
+select memid, memname from members order by memname asc; 
+
+-- 데이터 정렬하기, 열이름 변경
+select memid, memname as '회원명' from members order by memname asc; 
+
+select memid, memname from members order by memname ASC, memid desc;
+
+-- 중복 데이터 처리 : distinct
+select distinct jobcd from members order by jobcd;
+
+-- 상품 데이터 변경 하기
+update members set jobcd = '3' where memname='박기자';
