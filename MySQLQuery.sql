@@ -22,12 +22,12 @@ collate 'utf8mb4_general_ci'
 engine = InnoDB;
 
 -- members 데이터 넣기
-insert into members(memid, memname, addr, birthday, jobcd) values ('park','박기자','경기 부천', '1992-06-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('park','박기자','경기 부천', '1992-06-14','3');
 insert into members(memid, memname, addr, birthday, jobcd) values ('Tech','태현','경기 수원', '1980-11-14', '4');
-insert into members(memid, memname, addr, birthday, jobcd) values ('hong2','홍길동1','서울 강남 신사동', '2004-12-14', '4');
-insert into members(memid, memname, addr, birthday, jobcd) values ('seo','서갑돌','인천 동구', '2004-12-14', '4');
-insert into members(memid, memname, addr, birthday, jobcd) values ('kim1','김갑수','인천 동구 숭림동', '1980-11-14', '4');
-insert into members(memid, memname, addr, birthday, jobcd) values ('hong1','홍길동','인천 연수구 연수동', '2002-02-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('hong2','홍길동1','서울 강남 신사동', '2004-12-14', '9');
+insert into members(memid, memname, addr, birthday, jobcd) values ('seo','서갑돌','인천 동구', '2004-12-14', '1');
+insert into members(memid, memname, addr, birthday, jobcd) values ('kim1','김갑수','인천 동구 숭림동', '1980-11-14', '1');
+insert into members(memid, memname, addr, birthday, jobcd) values ('hong1','홍길동','인천 연수구 연수동', '2002-02-14', '2');
 
 
 
@@ -174,4 +174,7 @@ set global local_infile=true;
 
 -- 외부파일로부터 데이터 가져오기
 load data local infile 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\members.txt' into table members fields terminated by ',' enclosed by '"';
+-- 일회성으로 허용할 때 옵션설정
+local-infile
 
+local-infile -u <root> -p <1234> -P <3306> -h <210.103.83.39> <kamebook> < H:/database/DataBaseStudy-mysql/MySQLQuery.sql
