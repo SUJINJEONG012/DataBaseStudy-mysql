@@ -146,3 +146,5 @@ update members set jobcd = '3' where memname='박기자';
 
 -- 검색하는 행 수 제한하기 : LIMIT.. OFFSET
 select memid, memname from members order by memname limit 3; 
+-- offset은 앞에 2개를 제외하고 3행을 출력
+select memid, memname from members order by memname  limit 3 offset 2; 
