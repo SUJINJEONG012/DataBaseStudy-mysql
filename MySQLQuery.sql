@@ -159,3 +159,6 @@ select memid, memname , concat(memid, memname) from members;
 --show variables like "%secure_file%"; 로 입력하면 value에 나오는 경로로 저장이 된다. 다른방법도있다는데 난 그냥 기본경로로 설정
 -- 검색 결과를 파일로 내보내기 select into
 select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\members.txt' fields terminated by ',' enclosed by '"' from members;
+select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\goodsinfo.txt' fields terminated by ',' enclosed by '"' from goodsinfo;
+select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\order_h.txt' fields terminated by ',' enclosed by '"' from order_h;
+select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\order_d.txt' fields terminated by ',' enclosed by '"' from order_d;
