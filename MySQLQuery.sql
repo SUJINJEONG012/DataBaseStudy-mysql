@@ -25,6 +25,14 @@ engine = InnoDB;
 insert into members(memid, memname, addr, birthday, jobcd) values ('jeong','안젤라','부산광역시', '1992-04-24', '1');
 insert into members(memid, memname, addr, birthday, jobcd) values ('kang','수진','서울특별시', '1992-04-22', '3');
 insert into members(memid, memname, addr, birthday, jobcd) values ('wang','윌리','부산광역시', '1992-06-14', '4');
+
+insert into members(memid, memname, addr, birthday, jobcd) values ('park','홍길동','인천 동구 송림동', '1992-06-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('kim1','홍길동','서울 강남구 신사동', '1980-11-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('hong1','김갑수','인천 연수구 연수동', '2004-12-14', '4');
+insert into members(memid, memname, addr, birthday, jobcd) values ('hong2','박기자','경기 부천시', '2002-02-14', '4');
+
+
+
 -- 데이터 넣은 값 확인하기 
 select * from members;
 
