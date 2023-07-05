@@ -155,3 +155,7 @@ select memid, memname from members order by memname limit 2,3;
 select menid, memname, mileage + 10 as '연산열' from members;
 -- CONCAT()함수를 이용해서 열 추가하기 , 인수의 내용을 문자열로 결합하는 기능을 제공
 select memid, memname , concat(memid, memname) from members;
+
+--show variables like "%secure_file%"; 로 입력하면 value에 나오는 경로로 저장이 된다. 다른방법도있다는데 난 그냥 기본경로로 설정
+-- 검색 결과를 파일로 내보내기 select into
+select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\members.txt' fields terminated by ',' enclosed by '"' from members;
