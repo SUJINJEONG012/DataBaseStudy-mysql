@@ -148,3 +148,10 @@ update members set jobcd = '3' where memname='박기자';
 select memid, memname from members order by memname limit 3; 
 -- offset은 앞에 2개를 제외하고 3행을 출력
 select memid, memname from members order by memname  limit 3 offset 2; 
+select memid, memname from members order by memname limit 2,3;
+
+
+-- 연산 열 추가하기
+select menid, memname, mileage + 10 as '연산열' from members;
+-- CONCAT()함수를 이용해서 열 추가하기 , 인수의 내용을 문자열로 결합하는 기능을 제공
+select memid, memname , concat(memid, memname) from members;
