@@ -143,3 +143,6 @@ select distinct jobcd from members
 
 -- 상품 데이터 변경 하기
 update members set jobcd = '3' where memname='박기자';
+
+-- 검색하는 행 수 제한하기 : LIMIT.. OFFSET
+select memid, memname from members order by memname limit 3; 
