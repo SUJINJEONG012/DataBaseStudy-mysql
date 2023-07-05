@@ -139,7 +139,7 @@ select memid, memname as '회원명' from members order by memname asc;
 select memid, memname from members order by memname ASC, memid desc;
 
 -- 중복 데이터 처리 : distinct
-select distinct jobcd from members order by jobcd;
+select distinct jobcd from members
 
 -- 상품 데이터 변경 하기
 update members set jobcd = '3' where memname='박기자';
