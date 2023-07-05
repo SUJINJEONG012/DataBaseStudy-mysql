@@ -31,12 +31,8 @@ insert into members(memid, memname, addr, birthday, jobcd) values ('kim1','홍�
 insert into members(memid, memname, addr, birthday, jobcd) values ('hong1','김갑수','인천 연수구 연수동', '2004-12-14', '4');
 insert into members(memid, memname, addr, birthday, jobcd) values ('hong2','박기자','경기 부천시', '2002-02-14', '4');
 
-
-
 -- 데이터 넣은 값 확인하기 
 select * from members;
-
-
 
 -- goodsinfo 테이블생성
 create table goodsinfo (
@@ -111,10 +107,24 @@ engine = InnoDB;
 -- 주문상세 데이터 삽입
 insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
 
-insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
-insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
-insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
-insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
-insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '01', '2000', '10', '20000', '2023-03-02 15:10:39');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS02', '02', '2000', '10', '5000', '2023-03-02 15:10:39');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201001', 'GDS01', '03', '2000', '10', '5000', '2023-03-02 15:13:28');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201002', 'GDS01', '01', '2000', '10', '5000', '2023-03-02 15:14:26');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201002', 'GDS03', '03', '5000', '10', '50000', '2023-03-02 15:15:12');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201003', 'GDS04', '02', '500', '50', '25000', '2023-03-02 15:15:59');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201004', 'GDS05', '02', '1000', '50', '25000', '2023-03-02 15:16:45');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201005', 'GDS02', '02', '100', '4', '25000', '2023-03-02 15:17:39');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202201006', 'GDS01', '01', '2000', '1', '25000', '2023-03-02 15:18:08');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202202005', 'GDS01', '01', '2000', '10', '25000', '2023-03-02 15:18:59');
+
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202202001', 'GDS03', '03', '5000', '1', '5000', '2023-03-01 15:19:10');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202202001', 'GDS05', '02', '1000', '20', '20000', '2023-03-01 15:19:20');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202202003', 'GDS01', '01', '2000', '10', '20000', '2023-03-01 15:19:20');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202202003', 'GDS07', '03', '2000', '20', '40000', '2023-03-01 15:19:30');
+insert into order_d (orderno, goodscd, unitcd, unitprice, dty, amt, insdtm) values ('202202004', 'GDS01', '01', '2000', '10', '20000', '2023-03-01 15:21:18');
 
 
+-- 데이터 검색 select
+select memid, memname from members;
+-- 데이터 열 이름 지정하기 : AS
+select memname as '회원명' , memid as '회원ID' from members;
