@@ -162,3 +162,6 @@ select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\membe
 select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\goodsinfo.txt' fields terminated by ',' enclosed by '"' from goodsinfo;
 select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\order_h.txt' fields terminated by ',' enclosed by '"' from order_h;
 select * into outfile  'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\order_d.txt' fields terminated by ',' enclosed by '"' from order_d;
+
+
+-- 테이블 내용 삭제하기
