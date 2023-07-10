@@ -178,3 +178,11 @@ load data local infile 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\membe
 local-infile
 
 local-infile -u <root> -p <1234> -P <3306> -h <210.103.83.39> <kamebook> < H:/database/DataBaseStudy-mysql/MySQLQuery.sql
+
+
+
+-- 데이터 검색 select 하기
+-- 조건지정하여 데이터 검색하기 : where
+
+select memid, memname, addr, birthday, jobcd, mileage from members where memid='kim1';
+select memeid, memname, addr, birthday, jobcd,mileage from members where jobcd = '1' order by memid;
