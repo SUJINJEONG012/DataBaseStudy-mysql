@@ -200,3 +200,10 @@ select memid, memname, mileage from members where mileage between 100 and 500 or
 
 -- 조건지정하여 데이터 검색 : where ... like 
 select memid, memname, mileage from members where memname like '홍%' order by memid;
+
+-- 조건지정하여 데이터 검색 : in 
+select memid, memname, jobcd from members where jobcd in ('1','3') order by memid;
+-- OR 연산자를 사용하여 중복조건을 지정하는것과 동일함
+select memid, memname, jobcd from members where jobcd = '1' or  jobcd='3';
+
+
