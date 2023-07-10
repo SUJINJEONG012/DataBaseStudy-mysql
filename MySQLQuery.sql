@@ -219,3 +219,12 @@ insert into members (memid, memname) values('abcd','추가자');
 
 
 -- 새로운 테이블 생성
+
+create table board (
+    idx int(11) not null auto_increment,
+    title varchar(50) null default null collate 'utf8mb4_general_ci',
+    content text null default null collate 'utf8mb4_general_ci',
+    primary key (idx) using btree
+)
+collate 'utf8mb4_general_ci'
+engine= InnoDB;
