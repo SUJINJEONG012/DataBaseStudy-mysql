@@ -197,3 +197,6 @@ select * from members where mileage =500;
 
 -- 조건지정하여 데이터 검색 : where ... between
 select memid, memname, mileage from members where mileage between 100 and 500 order by memid;
+
+-- 조건지정하여 데이터 검색 : where ... like 
+select memid, memname, mileage from members where memname like '홍%' order by memid;
