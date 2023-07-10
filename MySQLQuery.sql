@@ -228,3 +228,6 @@ create table board (
 )
 collate 'utf8mb4_general_ci'
 engine= InnoDB;
+
+-- board 데이터 값 넣기 
+insert into board (title, content) values ('Auto Increment Test','Auto Increment 속성이 지정된 열은 데이터베이스에서 자동으로 값을 채운다.');
