@@ -185,4 +185,9 @@ local-infile -u <root> -p <1234> -P <3306> -h <210.103.83.39> <kamebook> < H:/da
 -- 조건지정하여 데이터 검색하기 : where
 
 select memid, memname, addr, birthday, jobcd, mileage from members where memid='kim1';
-select memeid, memname, addr, birthday, jobcd,mileage from members where jobcd = '1' order by memid;
+select memid, memname, addr, birthday, jobcd,mileage from members where jobcd = '1' order by memid;
+
+-- 날짜 검색 리터럴형식
+select memid, memname, addr, birthday , jobcd, mileage from members where birthday = '2002-02-14';
+select memid, memname, addr, birthday , jobcd, mileage from members where birthday = '20020214';
+select memid, memname, addr, birthday , jobcd, mileage from members where birthday = '2002.02.14';
