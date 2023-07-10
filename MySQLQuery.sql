@@ -142,7 +142,7 @@ select memid, memname from members order by memname ASC, memid desc;
 select distinct jobcd from members
 
 -- 상품 데이터 변경 하기
-update members set jobcd = '3' where memname='박기자';
+update members set mileage = '500' where memid='hong1';
 
 -- 검색하는 행 수 제한하기 : LIMIT.. OFFSET
 select memid, memname from members order by memname limit 3; 
@@ -191,3 +191,9 @@ select memid, memname, addr, birthday, jobcd,mileage from members where jobcd = 
 select memid, memname, addr, birthday , jobcd, mileage from members where birthday = '2002-02-14';
 select memid, memname, addr, birthday , jobcd, mileage from members where birthday = '20020214';
 select memid, memname, addr, birthday , jobcd, mileage from members where birthday = '2002.02.14';
+-- milgage 은 숫자형 데이터 이기 때문에 따옴표 없음
+select * from members where mileage =500; 
+
+
+-- 조건지정하여 데이터 검색 : where ... between
+select memid, memname, mileage from members where mileage between 100 and 500 order by memid;
