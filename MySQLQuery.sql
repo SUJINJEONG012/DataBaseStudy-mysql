@@ -206,4 +206,9 @@ select memid, memname, jobcd from members where jobcd in ('1','3') order by memi
 -- OR 연산자를 사용하여 중복조건을 지정하는것과 동일함
 select memid, memname, jobcd from members where jobcd = '1' or  jobcd='3';
 
+-- 조건 지정하여 데이터 검색하기 : not
+select memid, memname, jobcd from members where not jobcd = '1' order by memid;
+select memid, memname, jobcd from members where not jobcd != '1' order by memid;
 
+-- 조건 지정하여 데이터 검색하기 : IS NULL > NULL 인 경우 출력,  NULL인 아닌 자료를 검색할땐 조건절은 IS NOT NULL 이다.
+select memid, memname, jumin from members where jumin is null order by memid;
