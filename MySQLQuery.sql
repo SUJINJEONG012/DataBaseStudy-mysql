@@ -212,3 +212,10 @@ select memid, memname, jobcd from members where not jobcd != '1' order by memid;
 
 -- 조건 지정하여 데이터 검색하기 : IS NULL > NULL 인 경우 출력,  NULL인 아닌 자료를 검색할땐 조건절은 IS NOT NULL 이다.
 select memid, memname, jumin from members where jumin is null order by memid;
+
+-- insert 추가 데이터 입력
+insert into members (memid, memname) values('abcd','추가자');
+
+
+
+-- 새로운 테이블 생성
