@@ -231,3 +231,10 @@ engine= InnoDB;
 
 -- board 데이터 값 넣기 
 insert into board (title, content) values ('Auto Increment Test','Auto Increment 속성이 지정된 열은 데이터베이스에서 자동으로 값을 채운다.');
+insert into board (title, content) values ('2번째 제목', '2번째 내용');
+
+-- update쿼리문 사용 (데이터 변경) 2개이상열 수정
+update order_h set cancelyn = 'y', canceldtm = current_timestamp() where orderno = '202201005';
+
+-- delete 쿼리문
+delete from order_h;
